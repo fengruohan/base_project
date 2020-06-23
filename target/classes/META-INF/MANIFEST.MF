@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: base_project
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 86182
+Implementation-Vendor-Id: net.xdclass
+Build-Jdk: 1.8.0_102
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/base_project
+Created-By: Maven Integration for Eclipse
+
