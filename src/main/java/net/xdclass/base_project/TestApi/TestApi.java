@@ -24,11 +24,10 @@ public class TestApi {
 		conn.setDoOutput(true);
 		// allowUserInteraction 如果为 true，则在允许用户交互（例如弹出一个验证对话框）的上下文中对此 URL 进行检查。
 		conn.setAllowUserInteraction(false);
-		// 这三行是bug,忘了当初是测试打印日志，忘了屏蔽，感谢 黄邦锁 同学提醒 2019-12-31
-		// PrintStream ps = new PrintStream(conn.getOutputStream());
-		// ps.print(query);
+		PrintStream ps = new PrintStream(conn.getOutputStream());
+		ps.print(query);
 
-		// ps.close();
+		ps.close();
 
 		BufferedReader bReader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 
@@ -54,7 +53,7 @@ public class TestApi {
 			String subcode = ""; // 子号码（可选）
 			String msgid = UUID.randomUUID().toString().replace("-", ""); // 短信id，查询短信状态报告时需要，（可选）
 			String sendtime = ""; // 定时发送时间（可选）
-			String resultString = restUtil.load("http://www.dh3t.com/json/sms/Submit", "account="+account+"&password="+password+"&msgid="+msgid+"&phones="+phone+"&content="+content+"&sign="+sign+"&subcode="+subcode+"&sendtime="+sendtime);
+			String resultString = restUtil.load("http://www.dh3t.com/json/sms/Submit?", "account="+account+"&password="+password+"&msgid="+msgid+"&phones="+phone+"&content="+content+"&sign="+sign+"&subcode="+subcode+"&sendtime="+sendtime);
 		} catch (Exception e) { // TODO: handle exception System.out.print(e.getMessage());}}
 		}
 	}

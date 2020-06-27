@@ -32,15 +32,15 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="src/main/resources/lib/commons-httpclient-3.1.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/lib/commons-beanutils-core-1.8.0.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/lib/commons-codec-1.6.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/lib/commons-collections-3.2.1.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/lib/commons-discovery-0.2.jar"/>
-	<classpathentry kind="lib" path="src/main/resources/lib/commons-httpclient-3.1.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/lib/commons-lang-2.6.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/lib/commons-logging-1.1.1.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/lib/dahantc-http-json-api-resource.jar"/>
-	<classpathentry kind="lib" path="src/main/resources/lib/dahantc-http-json-api.jar" sourcepath="src/main/resources/lib/dahantc-http-json-api.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/dahantc-http-json-api.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/lib/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/lib/ezmorph-1.0.6.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/lib/json-lib-2.4-jdk15.jar"/>
