@@ -46,8 +46,15 @@ public class TestApi {
 	public static void main(String[] args) {
 		try {
 			TestApi restUtil = new TestApi();
-			String msgid = UUID.randomUUID().toString().replace("-", "");
-			String resultString = restUtil.load("http://www.dh3t.com/json/sms/Submit", "account=dh90204&password=bfd590c5a969fa4215fa579632b3f39c&msgid="+msgid+"&phones=18252723970&content=您的验证码是:123456&sign=UABC&subcode=null&sendtime=202006271945");
+			String content = "您的验证码是:123456";
+			String account = "dh90204";// 用户名（必填）
+			String password = "bfd590c5a969fa4215fa579632b3f39c";// 密码（必填,明文）
+			String phone = "18252723970"; // 手机号码（必填,多条以英文逗号隔开）
+			String sign = "【UABC】"; // 短信签名（必填）
+			String subcode = ""; // 子号码（可选）
+			String msgid = UUID.randomUUID().toString().replace("-", ""); // 短信id，查询短信状态报告时需要，（可选）
+			String sendtime = ""; // 定时发送时间（可选）
+			String resultString = restUtil.load("http://www.dh3t.com/json/sms/Submit", "account="+account+"&password="+password+"&msgid="+msgid+"&phones="+phone+"&content="+content+"&sign="+sign+"&subcode="+subcode+"&sendtime="+sendtime);
 		} catch (Exception e) { // TODO: handle exception System.out.print(e.getMessage());}}
 		}
 	}
